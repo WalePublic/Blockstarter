@@ -1,0 +1,32 @@
+.header {
+    height: calc(var(--header-row-height)*1.25);
+    margin-top: calc(var(--nav-row-height)*-1);
+    grid-column: full-start/full-end;
+    grid-row: var(--header-position)/ span var(--header-span);
+    background-size: cover;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-dark-rgb, 0.5), rgba($color-primary-light-rgb, 0.5)),
+    url(/cover.jpg);
+    background-position: top;
+    position: relative; 
+    clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+
+
+
+    &__logo-box {
+        position: absolute;
+        top: calc(var(--nav-row-height)*0.3);
+        left: 4rem;
+    }
+    &__logo{
+        height: 6rem;
+    }
+
+    &__text-box{
+        @include absCenter;
+        top: 40%;
+        text-align: center;
+    }
+
+
+}
+

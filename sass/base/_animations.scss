@@ -1,0 +1,49 @@
+@keyframes animateNavigation {
+    0%{
+        
+    }
+
+    83% {
+        transform: translateY(10rem);
+    }
+
+    85% {
+        border-radius: 10%;
+        height: 60rem; 
+        width: 6.2rem;
+    }
+
+    100% {
+        transform: translateY(20rem);
+        border-radius: 10%;
+        height: 60rem; 
+        width: 6.2rem;
+    }
+}
+
+@keyframes moveInBottom {
+  0%{
+      opacity: 0;
+      transform: translateX(3rem);
+  }
+
+  100%{
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+
+@keyframes growDown {
+    0% {
+      transform: scaleY(0);
+    }
+    80% {
+      transform: scaleY(1.1);
+      opacity:0.8;
+    }
+    100% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }

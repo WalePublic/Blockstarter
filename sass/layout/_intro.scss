@@ -1,0 +1,26 @@
+.intro-layout {
+    background-color: inherit;
+    height: 100%;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 2%;
+
+    &__left{
+        background-color: inherit;
+        color:black;
+        height: 100%;
+        width: 50%;
+        margin-left: 1rem;
+        padding-left: 1rem;
+    }
+
+    &__right {
+        background-color:var(--color-grey-light-2);
+        height: 100%;
+        width: 50%;
+        margin-right: 1rem;
+    }
+}

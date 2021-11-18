@@ -1,0 +1,31 @@
+
+//Since we are in the utilities class we can use important keyword
+//Since it's easy to add and remove utilities components and locate its
+
+.util-center-text {
+    text-align: center;
+}
+
+.util-center-item {
+    @include absCenter;
+}
+
+.util-zindex-lvl-1 {
+    z-index: var(--z-index-lvl-1);
+}
+
+.util-margin-bottom-small {
+    margin-bottom: 1.5rem;
+}
+
+.util-margin-bottom-medium {
+    margin-bottom: 4rem;
+}
+
+.util-margin-bottom-big {
+    margin-bottom: 8rem;
+}
+
+.util-margin-top-big {
+    margin-top: 8rem;
+}

@@ -1,0 +1,105 @@
+//Colors
+:root {
+    --color-primary: #55c57a;
+    --color-primary-light: #7ed56f;
+    --color-primary-dark: #28b485;
+
+    --color-secondary-light: #ffb900;
+    --color-secondary-dark: #ff7730;
+
+    --color-tertiary-light: #2998ff;
+    --color-tertiary-dark: #5643fa;
+
+
+    --color-tech-light: #2998ff;
+    --color-tech-dark: #5643fa;
+
+    --color-science-light: #f00c0c;
+    --color-science-dark: #b60808;
+
+    --color-art-light: #54ff29;
+    --color-art-dark: #2aad0a;
+
+    --color-social-light: #fffc3c;
+    --color-social-dark: #c9c500;
+
+    --color-grey-light-1: #f7f7f7;
+    --color-grey-light-2: #eee;
+    --color-grey-light-3: #aaa;
+
+    --color-grey-dark-1: #777;
+    --color-grey-dark-2: #555;
+    --color-grey-dark-3: #444;
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    //LAYOUT
+    --nav-row-height: 12vh;
+    --header-row-height: 40vw;
+
+    //Z-INDEX LEVEL
+    --z-index-lvl-1: 100;
+    --z-index-lvl-2: 100;
+    --z-index-lvl-3: 100;
+    --z-index-navigation: calc(var(--z-index-lvl-1) + 1);
+    --z-index-nav-btn-bg: calc(var(--z-index-navigation) + 1);
+    --z-index-nav-btn: calc(var(--z-index-nav-btn-bg) + 1);
+
+    //GRID-ORDER
+    --nav-span: 1;
+    --header-span: 2;
+    --main-span: 3;
+
+    --nav-position: 1;
+    --header-position: calc(var(--nav-position) + var(--nav-span));
+    --main-position: calc(var(--header-position) + var(--header-span));
+    --categories-position: calc(var(--main-position) + var(--main-span));
+    --popselection-position: calc(var(--categories-position) + 1);
+    --testimonial-position: calc(var(--popselection-position) + 1);
+    --cta-position: calc(var(--testimonial-position) + 1);
+    --right-above-footer: var(--cta-position);
+}
+
+//COLOR FOR RGB required functions
+$color-primary-rgb: rgb(85, 197, 122);
+$color-primary-light-rgb: rgb(126, 213, 111);
+$color-primary-dark-rgb: rgb(40, 180, 133);
+$color-white-rgb: rgb(255, 255, 255);
+$color-light-shadow-rgb: rgb(40, 40, 40);
+$color-dark-shadow-rgb: rgb(0, 0, 0);
+$color-black-rgb: rgb(0, 0, 0);
+
+
+//Maybe lightseagreen
+$color-tech-light: #2998ff;
+$color-tech-dark: #5643fa;
+
+$color-science-light: #f00c0c;
+$color-science-dark: #b60808;
+
+$color-art-light: #54ff29;
+$color-art-dark: #2aad0a;
+
+$color-social-light: #fffc3c;
+$color-social-dark: #c9c500;
+
+//FONT
+$default-font-size: 1.6rem;
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+//GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+
+
+//SHAPE
+$corner-radius-minor: 20%;
+
+//RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px

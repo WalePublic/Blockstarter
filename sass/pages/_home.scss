@@ -1,0 +1,42 @@
+.section-intro {
+    background-color:var(--color-grey-light-2);
+    height: 50vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    column-gap: 5rem; 
+}
+
+.section-categories {
+    height: 90vh;
+    width: 100%;
+    //border-bottom:30rem;
+}
+
+.section-popular {
+    background-color:var(--color-grey-light-2);
+    height: 70vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-testimonial {
+    background-color:var(--color-grey-light-2);
+    //background-image: linear-gradient(to bottom, white 0%, transparent 50%, $color-white-rgb 50%);
+    position: relative;
+    height: 76rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-cta{
+    background-image: linear-gradient(to right bottom, var(--color-primary-light),var(--color-primary-dark));
+    width: 100%;
+}

@@ -1,0 +1,186 @@
+.d-card{
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 52rem;
+    width: 40rem;
+
+    &__side {
+        height: 52rem;
+        transition: all 1.8s;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        border-radius: 20px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black-rgb, .15);
+        overflow: hidden;
+        &--front{
+            background-color: var(--color-white);
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+            
+            &-1{
+                background-image: linear-gradient(to right bottom, var(--color-tech-light), var(--color-tech-dark));
+            }
+
+            &-2{
+                background-image: linear-gradient(to right bottom, var(--color-science-light), var(--color-science-dark));
+            }
+
+            &-3{
+                background-image: linear-gradient(to right bottom, var(--color-art-light), var(--color-art-dark));
+            }
+        }
+    }
+
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+        border-radius: 80px;
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+        border-radius: 200px;
+    }
+
+    //Front side styling
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1{
+            background-image: linear-gradient(to right bottom, var(--color-tech-light),var(--color-tech-dark)),  
+            url("/drone1.jpg");
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom, var(--color-science-light),var(--color-science-dark)),  
+            url("/sphere.jpg");
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom, var(--color-art-light),var(--color-art-dark)),  
+            url("/drone1.jpg");
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: var(--color-white);
+        text-align: right;
+        position: absolute;
+        top: 16rem;
+        right: 2rem;
+        width: 75%;
+        line-height: 1.85;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right, 
+            rgba($color-tech-light, .85),
+            rgba($color-tech-dark, .85));
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right, 
+            rgba($color-science-light, .85),
+            rgba($color-science-dark, .85));
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right, 
+            rgba($color-art-light, .85),
+            rgba($color-art-dark, .85));
+        }
+    }
+
+    &__icon{
+        //font-size: 6rem;
+        //margin-bottom: .5rem;
+        float: left;
+        height: 3rem;
+        width:3rem;
+        background-image: linear-gradient(
+            to right,
+            $color-primary-light-rgb,
+            $color-primary-dark-rgb);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color:transparent;
+    }
+
+    &__description {
+        margin: auto;
+        width: 80%;
+        line-height: 1.9;
+    }
+
+    &__details {
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 3rem auto;
+            color: var(--color-grey-dark-3);
+
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid var(--color-grey-light-2);
+                }
+            }
+        }
+    }
+
+    //FRONT SIDE STYLING
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+        color: var(--color-white);
+    }
+
+    &__contribution-box{
+        position: relative;
+        text-align: center;
+        transform: translate(0%, 40%);
+        color: var(--color-white);
+        //height: 30%;
+        //margin-bottom: 8rem;
+    }
+
+    &__contribution-value{
+        font-size: 5rem;
+        font-weight: 100;
+        top: 1rem;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        border-bottom: 0px;
+    }
+
+    &__contribution-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        border-bottom: 0px;
+    }
+}

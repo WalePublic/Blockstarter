@@ -1,0 +1,6 @@
+.section-create {
+    background-color: green;
+    background-image: linear-gradient(to bottom, chartreuse, white);
+    grid-column: full-start/ full-end;
+    grid-row: var(--header-position)/ var(--right-above-footer);
+}

@@ -1,0 +1,81 @@
+:root {
+  --color-primary: #55c57a;
+  --color-primary-light: #7ed56f;
+  --color-primary-dark: 28b485;
+  --color-secondary-light: #ffb900;
+  --color-secondary-dark: #ff7730;
+  --color-tertiary-light: #2998ff;
+  --color-tertiary-dark: #5643fa;
+  --color-grey-light-1: #f7f7f7;
+  --color-grey-light-2: #eee;
+  --color-grey-light-3: #aaa;
+  --color-grey-dark-1: #777;
+  --color-grey-dark-2: #555;
+  --color-grey-dark-3: #444;
+  --color-white: #fff;
+  --color-black: #000;
+  --nav-position: 1;
+  --header-position: calc(var(--nav-position) + 1);
+  --main-position: calc(var(--header-position) + 1); }
+
+.footer {
+  background-color: var(--color-secondary-dark);
+  grid-row: -1/span 1;
+  grid-column: full-start/full-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; }
+
+.header {
+  background-color: var(--color-grey-dark-1);
+  grid-column: full-start/full-end;
+  grid-row: var(--header-position)/span 2; }
+
+.navigation {
+  background-color: var(--color-primary);
+  grid-column: full-start/full-end;
+  grid-row: 1/ span 1;
+  margin-left: 1rem; }
+
+.section-testimonial {
+  background-color: purple; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(color-grey-dark-2);
+  font-weight: 300;
+  line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: 40vh min-content 40vw repeat(5, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  background-color: darkorange; }
+  @media only screen and (max-width: 62.5em) {
+    .container {
+      grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 7rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+      grid-template-rows: 40vh min-content 20vw repeat(3, min-content);
+      background-color: darkred; } }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-rows: 3rem calc(75vh - 80rem);
+      background-color: darksalmon; } }
+  @media only screen and (max-width: 37.5em) {
+    .container {
+      grid-template-rows: 3rem calc(50vh - 20rem);
+      background-color: darkgreen; } }

@@ -1,0 +1,47 @@
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //1rem = 10px
+    
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: var(color-grey-dark-2);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: [full-start] var(--nav-row-height) min-content var(--header-row-height) repeat(3, minmax( min-content, 20rem)) [full-end];
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    background-color: var(--color-grey-light-2);
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 7rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+        grid-template-rows: [full-start] 12vh min-content 20vh repeat(3, min-content) [full-end];
+        background-color: darkred;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: [full-start] 3rem calc(75vh - 80rem) [full-end];
+        background-color: darksalmon;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: [full-start] 3rem calc(50vh - 20rem) [full-end];
+        background-color: darkgreen;
+    }
+
+}

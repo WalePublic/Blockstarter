@@ -1,0 +1,6 @@
+.section-explore-list {
+    background-color: red;
+    background-image: linear-gradient(to bottom, rgba($color-black-rgb, 0.6), transparent);
+    grid-column: full-start/full-end;
+    grid-row: var(--header-position)/ var(--right-above-footer);
+}

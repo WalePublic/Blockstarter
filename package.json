@@ -1,0 +1,47 @@
+{
+  "name": "blockstart",
+  "version": "0.1.0",
+  "description": "Blockstart, where ideas come to live with blockchain",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "start:dev": "npm-run-all --parallel watch:sass dev",
+    "lint": "next lint",
+    "watch:sass": "node-sass sass/main.scss styles/style.css -w",
+    "devliveserver": "live-server --browser=brave",
+    "compile:sass": "node-sass sass/main.scss styles/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" styles/style.comp.css -o styles/style.prefix.css",
+    "compress:css": "node-sass styles/style.prefix.css styles/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-cookie": "^4.1.1",
+    "react-dom": "17.0.2",
+    "solc": "^0.4.17",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web3": "^1.0.0-beta.26"
+  },
+  "author": "Wale Jaiyeola",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/react": "17.0.33",
+    "@types/web3": "^1.2.2",
+    "autoprefixer": "^10.3.7",
+    "concat": "^1.0.3",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "fs-extra": "^10.0.0",
+    "ganache-cli": "^6.12.2",
+    "mocha": "^9.1.3",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^9.0.1",
+    "typescript": "^4.4.4"
+  }
+}

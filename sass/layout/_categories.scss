@@ -1,0 +1,44 @@
+.cat-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    column-gap: 3%;
+
+
+    padding: 0rem 0;
+    background-image: linear-gradient(to right bottom,
+        rgba($color-primary-light-rgb, 0.3),
+        rgba($color-primary-dark-rgb, 0.2)), url(/science.jpg);
+    background-size: cover;
+    transform: skewY(-6deg);
+    margin-top: -7rem;
+    height: 120%;
+    width: 100%;
+
+    //direct child
+    & > *{
+        transform: skewY(6deg);
+    }
+}
+
+.cat-board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 48rem;
+    width: 100%;
+    row-gap: 5%;
+    margin: 0rem;
+    padding:0rem;
+
+    &:hover .long-card:hover {
+        background-color: red;
+    }
+
+    &:hover .long-card:not(:hover){
+        background-color: blue;
+        transform: scale(0.9);
+    }
+}

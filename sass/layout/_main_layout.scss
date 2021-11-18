@@ -1,0 +1,6 @@
+.main-layout {
+    background-color:fuchsia;
+    grid-row: var(--main-position)/span var(--main-span);
+    grid-column: full-start/full-end;
+    padding: .2em .2em .2em .2em;
+}

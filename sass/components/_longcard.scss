@@ -1,0 +1,52 @@
+.long-card{
+    background-color: rgba($color: $color-white-rgb, $alpha: 0.8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    margin: 1%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black-rgb, $alpha: .15);
+    
+    height: 100%;
+    width: 20%;
+    z-index: var(--z-index-lvl-2);
+    transition: transform 0.3s;
+
+    &__icon{
+        font-size: 6rem;
+        margin-bottom: .5rem;
+        height: 20%;
+        width:20%;
+        display: inline-block;
+        background-image: linear-gradient(
+            to right,
+            $color-primary-light-rgb,
+            $color-primary-dark-rgb);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color:transparent;
+    }
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.04);
+    }
+
+
+    /*&:focus ~ &,
+    &:hover ~ & {
+        transform: translateY(-1.5rem) scale(0.5);
+
+        &::before {
+            background-color: red;
+        }
+    }*/
+    
+
+    &__text-heading{
+        color: var(--color-black);
+    }
+
+    &__text-body{
+        color: var(--color-white);
+    }
+}
